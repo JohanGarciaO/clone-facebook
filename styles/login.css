@@ -1,0 +1,422 @@
+/*
+    Autor: Johan Garcia
+    Github: https://github.com/JohanGarciaO
+*/
+
+:root {
+    --color-primary: #1877F2;
+    --color-background: #F0F2F5;
+    --color-secondary-button: #E4E6EB;
+    --color-primary-icon: #050505;
+    --color-notification: #e41e3f;
+    --color-tertiary-button:#42b72a;
+}
+
+.color-primary {
+    color: var(--color-primary)!important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+    background-color: var(--color-background);
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.login {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.form {
+    width: 396px;
+    height: 350px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+    padding: 10px 0px;
+}
+
+.login form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.divisoria-form {
+    margin: 20px 0px;
+    width: 364px;
+    background-color: #dddfe2;
+    height: 1px;
+}
+
+.login form input, .login form button {
+    width: 364px;
+    height: 52px;
+    margin: 5px 0px;
+    border-radius: 6px;
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+    padding: 14px 16px;
+    outline: none;
+}
+
+.login form input:focus {
+    border: 1px solid var(--color-primary);
+}
+
+.forgetPassword {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.forgetPassword:hover{
+    text-decoration: underline;
+}
+
+.form form button {
+    background-color: var(--color-primary);
+    font-weight: bold;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.newAccount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    background-color: var(--color-tertiary-button);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 14px 16px;
+    border: 1px solid var(--color-tertiary-button);
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.newAccount:hover {
+    background-color: #40a52c;
+}
+
+.extra {
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    margin: 25px 0px;
+    width: 396px;
+}
+
+.extra a{
+    color: #000;
+    font-weight: bold;
+}
+
+.extra a:hover {
+    text-decoration: underline;
+}
+
+.welcome {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 500px;
+}
+
+.svg {
+    width: 200px;
+    height: 70px;
+    margin: 0px -20px;
+}
+
+.recentLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.recentLogin span:nth-child(1) {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.recentLogin span:nth-child(2) {
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    color: #606770;
+    margin-bottom: 25px;
+}
+
+.card-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #dddfe2;
+    background-color: #fff;
+}
+
+.profile {
+    width: 160px;
+    height: 160px;
+    background-color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.nome {
+    margin: 12px 0px;
+    font-family: SFProText-Medium, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #4b4f56;
+}
+
+.remover-card, .notification {
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 30px;
+    height: 30px;
+    left: -10px;
+    top: -10px;
+}
+
+.remover-card div, .notification div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    font-family: SFProText-Regular, Helvetica, Arial, sans-serif;
+    transition: .1s;
+    position: relative;
+}
+
+.notification-right {
+    align-items: flex-start;
+    justify-content: flex-start;
+    right: -10px;
+    left: auto;
+    padding: 4px;
+}
+
+.notification-right div {
+    background-color: var(--color-notification);
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.card:hover .remover-card div {
+    box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, .3);
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    font-size: 24px;
+    color: #606770;
+    padding: 0px;
+}
+
+.card:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.icon-default {
+    width: 42px;
+    height: 42px;
+}
+
+footer {
+    width: 100%;
+    min-height: 176px;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70%;
+}
+
+.content-footer > div > ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #8a8d91;
+    font-size: 12px;
+    flex-wrap: wrap;
+    column-gap: 12px;
+    row-gap: 5px;
+}
+
+.afins > ul {
+    column-gap: 16px!important;
+}
+
+.idiomas button {
+    width: 30px;
+    border: 1px solid #ccd0d5;
+    background-color: #f5f6f7;
+    font-weight: bold;
+    font-size: 16px;
+    color: #4b4f56e3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content-footer a {
+    color: #8a8d91;
+}
+
+.content-footer a:hover {
+    text-decoration: underline;
+}
+
+.divisoria {
+    width: 100%;
+    background-color: #ccc;
+    height: 1px;
+    margin: 10px 0px;
+}
+
+.copy {
+    margin-top: 15px;
+}
+
+.copy span {
+    font-size: 11px;
+    color: #737373;
+}
+
+@media(max-width: 900px){
+    .container {
+        height: 135vh;
+    }
+    .content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .welcome {
+        height: auto;
+        margin-bottom: 20px;
+    }
+    .content-welcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .recentLogin {
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .svg {
+        margin: 10px -20px;        
+        margin-bottom: 0px;
+    }
+    .recentLogin span:nth-child(1) {
+        font-size: 24px;
+    }    
+    .recentLogin span:nth-child(2) {
+        margin-bottom: 15px;
+    }
+    .content-footer {
+        width: 90%;
+    }
+    .content-footer > div > ul{
+        font-size: 12px;
+        column-gap: 6px;
+    }
+    .afins > ul {
+        column-gap: 12px!important;
+    }
+    .copy {
+        margin: 20px 0px;
+    }
+}
+
+@media(max-width: 480px){
+    .container {
+        height: auto;
+    }
+    .login form input, .login form button, .extra {
+        width: 350px;
+    }
+}
